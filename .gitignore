@@ -1,8 +1,8 @@
 # Dependencies
-/node_modules/
+*/node_modules/
 
 # pnpm store
-.pnpm-store/
+.pnpm-store/*
 .pnpm/
 
 # Logs
@@ -24,6 +24,8 @@ pnpm-debug.log*
 dist/
 build/
 *.local
+
+.astro
 
 # Editor and OS specific files
 .vscode/
