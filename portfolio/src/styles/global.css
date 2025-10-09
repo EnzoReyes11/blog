@@ -4,7 +4,19 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "IBMPlexSans";
+  src: url("/fonts/IBMPlexSans-VariableFont_wdth,wght.ttf") format("truetype");
+  font-style:normal;
+  font-display:swap;
+}
+
 body {
+  font-family: "IBMPlexSans", monospace !important;
+}
+
+h1, h2, h3, h4, h5, h6, a {
   font-family: "VCR", monospace !important;
 }
 
