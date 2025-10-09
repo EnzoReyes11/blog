@@ -19,8 +19,10 @@ function worklogLoader(): Loader {
           const filePath = path.join(contentDir, file);
           const content = await fs.readFile(filePath, "utf-8");
           const repoName = file.replace(/-WORKLOG\.md$/, "");
-          const headerMatch = content.match(/^(.*?)(?=###\s\d{2}\/\d{2}\/\d{2})/s);
-          const header = headerMatch ? headerMatch[1].trim() : "";
+          const introMatch = content.match(/^(.*?)(?=###\s\d{2}\/\d{2}\/\d{2})/s);
+          const intro = introMatch ? introMatch[1].trim().replace(/^#\s*(.*)/, "") : "";
+          const titleMatch = content.match(/^#\s*(.*)/);
+          const title = titleMatch ? titleMatch[1] : repoName;
           const dateEntries = content.split(/(?=###\s\d{2}\/\d{2}\/\d{2})/).slice(1);
 
           for (const entry of dateEntries) {
@@ -29,7 +31,8 @@ function worklogLoader(): Loader {
             const dateStr = dateMatch[1];
             const [day, month, year] = dateStr.split("/");
             const pubDate = new Date(Number(`20${year}`), Number(month) - 1, Number(day));
-            const entryContent = entry.replace(/###\s\d{2}\/\d{2}\/\d{2}\n?/, "");
+            const entryContent = intro.concat("\n", entry.replace(/###\s\d{2}\/\d{2}\/\d{2}\n?/, ""));
+          logger.info(entryContent)
             const slug = `${repoName.toLowerCase()}-${year}-${month}-${day}`;
 
             store.set({
@@ -37,7 +40,7 @@ function worklogLoader(): Loader {
               data: {
                 slug: slug,
                 collection: "blog",
-                title: `${header}: ${repoName} (${dateStr})`,
+                title: `${title}: ${repoName} (${dateStr})`,
                 description: entryContent.trim().split("\n")[0].slice(0, 160),
                 pubDate: pubDate,
               },
