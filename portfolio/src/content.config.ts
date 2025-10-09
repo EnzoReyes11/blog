@@ -1,7 +1,6 @@
 import { defineCollection, z } from "astro:content";
 import fs from "fs/promises";
 import path from "path";
-import { glob } from 'astro/loaders';
 import type { Loader } from 'astro/loaders';
 
 function worklogLoader(): Loader {

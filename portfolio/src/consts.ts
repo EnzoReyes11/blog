@@ -1,6 +1,6 @@
 export const SITE_TITLE = "Enzo Reyes Dev Blog";
 export const SITE_DESCRIPTION =
-  `This is my dev blog. I have information of the projects i'm working on and their status.`.trim();
+  `I'm Enzo Reyes, this is my dev blog. I will track all my projects and their status here.`.trim();
 
 export const KNOWN_TECH = `Python,Javascript,Typescript,Databases,Cloud Programming (GCP),Data,ReactJS,Next.JS,Astro,and more!`
   .split(
