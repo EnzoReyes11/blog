@@ -1,5 +1,14 @@
 # Worklog
 
+### 10/10/25
+Improved fonts and other minor changes.
+
+#### Done:
+- Added the new IBM Plex Font (normal and italic) into Tailwind. Now font-sans is IBM Plex.
+- Fixed the fonts in Chips and BlogPostCard excerpt. 
+- Fixed white space wrapping in About Me.
+- Added backlong and Techonologies into Project.md
+
 ### 09/10/25
 Now this blog also uses worklog-action to generate the content.
 Started to tweak the fonts.
