@@ -20,15 +20,16 @@ This blog is being served by Github Pages, and it's redeployed on each merge int
   - About Me and Technologies still need standalone pages.
 - Re-evaluate if the card design looks good when there is more content. 
 - Navigation and Filters:
-  1 On each Worklog post there should be an automatically created link into the Project file.
-  1 On each Project file, there should be a link into the Worklog section, but filtered by Project.
-  1 Clicking on a Technology chip should link to Projects and Worklogs related to that. To accomplish this, each Project should have (added manually at least), the list of technologies used.
+  1. On each Worklog post there should be an automatically created link into the Project file.
+  1. On each Project file, there should be a link into the Worklog section, but filtered by Project.
+  1. Clicking on a Technology chip should link to Projects and Worklogs related to that. To accomplish this, each Project should have (added manually at least), the list of technologies used.
 - Find a Hero image.
 
 
 ## Technologies:
 - Typescript
 - Astro
+- Github Actions
 - Tailwind
 - NPM
 - PNPM
