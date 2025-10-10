@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "VCR";
   src: url("/fonts/VCRosdNEUE.ttf") format("truetype");
@@ -12,19 +16,18 @@
   font-display:swap;
 }
 
-body {
-  font-family: "IBMPlexSans", monospace !important;
+
+/* 4. ADD the new layer block */
+@layer base {
+  /* By default, body will use the 'sans' font family from your tailwind config */
+  body {
+    @apply font-plex;
+  }
+  h1, h2, h3, h4, h5, h6, a {
+    @apply font-vcr;
+  }
 }
 
-h1, h2, h3, h4, h5, h6, a {
-  font-family: "VCR", monospace !important;
-}
-
-pre,
-code {
-  font-family: "VCR", monospace !important;
-  font-weight: 100;
-}
 
 ::selection {
   background: #fff;
