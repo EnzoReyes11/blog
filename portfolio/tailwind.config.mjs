@@ -8,7 +8,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				plex: ['IBMPlexSans', ...defaultTheme.fontFamily.sans],
+				sans: ['IBMPlexSans', ...defaultTheme.fontFamily.sans],
 				vcr: ['VCR', ...defaultTheme.fontFamily.sans],
 			},
 		},

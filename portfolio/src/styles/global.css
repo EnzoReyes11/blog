@@ -16,12 +16,19 @@
   font-display:swap;
 }
 
+@font-face {
+  font-family: "IBMPlexSans";
+  src: url("/fonts/IBMPlexSans-Italic-VariableFont_wdth,wght.ttf") format("truetype");
+  font-style: italic;
+  font-display: swap;
+}
+
 
 /* 4. ADD the new layer block */
 @layer base {
   /* By default, body will use the 'sans' font family from your tailwind config */
   body {
-    @apply font-plex;
+    @apply font-sans;
   }
   h1, h2, h3, h4, h5, h6, a {
     @apply font-vcr;
