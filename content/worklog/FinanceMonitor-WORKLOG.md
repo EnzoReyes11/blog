@@ -1,5 +1,55 @@
 # Worklog
 
+### 20/10/25
+Today was another long day. Made a lot of progress into getting the latest values from
+Alpha Vantage. The daily limit is only 25 request, which is too low.
+I will consider other options to get the values, maybe yfinance.
+
+- Added terraform scripts to generate BQ dataset
+- A script to populate dim_date
+- Manually populating DIM Asset now
+- Loading prices into a temp table.
+- Moving and transforming the prices from the temp table to the final fact table.
+
+#### Working On
+- The script ends with an error still, there is a lot of commented code.
+- There are some work arounds that i commented, i need to review if i want to still
+support those "plan b" paths.
+- Try the Docker container and on Cloud Run. I only tried this locally.
+
+
+### 19/10/25
+
+#### Done
+- Writing to GCS
+
+#### Next Steps
+
+### 18/10/25
+Saturday, early morning start. I want to have something more done during the morning, as
+I will go climbing in the afternoon! I need to move my body...I've been sitting too
+much this past week.
+
+#### Done
+- Configured Pylance, now it's able to find packages.
+- Some general .vscode configurations.
+- Added terraform code to create the GCS bucket
+- AVExtract:
+  - Connects to get the symbols from the `stocks` table.
+  - Queries AV API with the backfill.
+  - Tries to write to the GCS bucket.
+
+#### Next steps:
+- Actually write to GCS. There were errors. **There is a return on run() finishing the extract job early.**
+- Refactor the ENV variables. Rethink what is need. GCP_PROJECT_ID or BQ_PROJECT_ID. 
+- Work again in the table schemas. There were some schemas created some time ago, but where not used. 
+Look on the `investmentsmonitor` dataset and migrate/bq_dataset. It might be a good time to introduce
+the proper schemas with transactions and facts.
+- Read from the GCS bucket and load into BQ.
+- Generate BQ assets with terraform.
+
+
+
 ### 17/10/25
 Today was very productive. Lots of changes introduced. 
 I switched to Claude Sonnet 4.5. It really was very helpfull, 
