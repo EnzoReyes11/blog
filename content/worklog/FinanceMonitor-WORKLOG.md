@@ -1,10 +1,37 @@
 # Worklog
 
+### 22/10/25
+Both daily and backfill run beautifully. At this point I'm also ready to stop the old service.
+I need to add more assets, but also add the transactions. Or at least a table with the amounts
+I'm currently holding.
+
+I'm going to implement the hole process before starting the unit tests.
+
+#### Done
+- Tested the backfill. 
+- Generated some unit test, but won't commit that code for now. I'll send it to a
+branch so I don't lose it.
+
+### 21/10/25
+#### Done
+- Extract and Load from AV done. Tested for the Daily input.
+- Manually added more stocks into dim_asset.
+
+#### Working on
+- Test the Backfill run.
+
+#### Next
+- Unit tests. Boring, but necessary.
+- Ingesting my daily transactions.
+
+
+
 ### 20/10/25
 Today was another long day. Made a lot of progress into getting the latest values from
 Alpha Vantage. The daily limit is only 25 request, which is too low.
 I will consider other options to get the values, maybe yfinance.
 
+#### Done
 - Added terraform scripts to generate BQ dataset
 - A script to populate dim_date
 - Manually populating DIM Asset now
