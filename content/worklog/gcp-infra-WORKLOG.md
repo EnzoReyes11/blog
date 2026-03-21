@@ -1,6 +1,9 @@
 # Worklog
 
 ## 2026-03-21
+Lots of work in the last few days. My platform is getting into shape. I already ingested old repos, and gave them the new templates. 
+I've to also ingest resources, and external clients repos and resources.
+Once that's done, I can start creating new templates to scaffold different stacks.
 
 ### Done
 - Fixed Google OAuth auth on Cloud Run, guest sign was showing up after migration to 1.49.0.
@@ -9,13 +12,16 @@
 - Renamed catalog/user.yaml to catalog/org.yaml
 - Organized Agent files and internal documentation a bit. Still needs more love.
 - Configured Techdocs
+- Add the workflow-action to the common assets repo
+- Add give-template, an action that gives a template into an already existing repo via PR
+- Auto discovery of github repos with catalog-info.yaml
 
 ### Next steps
 - new-client-project: collect billing account in template UI (currently set manually as `GCP_BILLING_ACCOUNT` GitHub Secret)
 - sync-template Option 2 — Bulk sync via custom backend action + custom EntityVersionPicker field extension
-- Add the workflow-action to the common assets repo
-
-
+- Ingest resources
+- Ingest external clients
+- Work on new templates to scaffold stacks: python, nodejs, go, etc.
 
 
 ## 2026-03-20
