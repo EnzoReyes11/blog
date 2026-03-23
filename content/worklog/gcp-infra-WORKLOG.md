@@ -2,7 +2,11 @@
 
 ## 2026-03-22
 Working on improving the worklog action. Builds failed yesterday. I found out that my common-assets had a copy of the worklog action,
-it was using a modified version. Testing if using the real one works.
+it was using a modified version. Testing if using the real one works. It did not work. I'm back to having it in assets.
+Anyway, the build error is gone.
+
+### Next steps:
+Verify with this worklogs are not appearing on the site. The project is appearing, but not the logs.
 
 
 ## 2026-03-21
