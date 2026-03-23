@@ -1,20 +1,20 @@
 # Worklog
 
-## 2026-03-22
+### 2026-03-22
 Working on improving the worklog action. Builds failed yesterday. I found out that my common-assets had a copy of the worklog action,
 it was using a modified version. Testing if using the real one works. It did not work. I'm back to having it in assets.
 Anyway, the build error is gone.
 
-### Next steps:
+#### Next steps:
 Verify with this worklogs are not appearing on the site. The project is appearing, but not the logs.
 
 
-## 2026-03-21
+### 2026-03-21
 Lots of work in the last few days. My platform is getting into shape. I already ingested old repos, and gave them the new templates. 
 I've to also ingest resources, and external clients repos and resources.
 Once that's done, I can start creating new templates to scaffold different stacks.
 
-### Done
+#### Done
 - Fixed Google OAuth auth on Cloud Run, guest sign was showing up after migration to 1.49.0.
 - Fixed production catalog path resolution: `../../catalog/` → `./catalog/` 
 - Switched templates in production to pointing to GitHub 
@@ -25,7 +25,7 @@ Once that's done, I can start creating new templates to scaffold different stack
 - Add give-template, an action that gives a template into an already existing repo via PR
 - Auto discovery of github repos with catalog-info.yaml
 
-### Next steps
+#### Next steps
 - new-client-project: collect billing account in template UI (currently set manually as `GCP_BILLING_ACCOUNT` GitHub Secret)
 - sync-template Option 2 — Bulk sync via custom backend action + custom EntityVersionPicker field extension
 - Ingest resources
@@ -33,9 +33,9 @@ Once that's done, I can start creating new templates to scaffold different stack
 - Work on new templates to scaffold stacks: python, nodejs, go, etc.
 
 
-## 2026-03-20
+### 2026-03-20
 
-### Done
+#### Done
 - Updated Backstage to version 1.49.0
 - Updated Backstage to use Postgres instead of SQLite for local development. With this, no code changes are needed.
 - Added docker compose to spin up postgres.
@@ -48,7 +48,7 @@ Once that's done, I can start creating new templates to scaffold different stack
 - Extended `config:get` action with GCP infrastructure values (WIF provider, tf-admin-sa, state bucket, budget topic)
 - Deployed to Cloud Run + terraform apply
 
-### Next steps
+#### Next steps
 - Broken auth after migration to v1.49.0
 - [x] Task 7.2 — Switch production catalog to GitHub provider (`@backstage/plugin-catalog-backend-module-github`) so new client YAML files merged to gcp-infra are auto-discovered without a Backstage redeploy. Register provider in `index.ts`, configure in `app-config.production.yaml` with 30min polling on `backstage/catalog/clients/*.yaml`
 - [x] Task 7.1 — Configure TechDocs for production: switch to `builder: external`, provision GCS bucket for pre-built docs, configure `publisher.type: googleGcs` in `app-config.production.yaml`, add Cloud Build step to run `techdocs-cli generate` and publish to GCS on each deploy
@@ -56,9 +56,9 @@ Once that's done, I can start creating new templates to scaffold different stack
 - [ ] new-client-project: collect billing account in the template UI and bake it into the workflow (currently set manually as `GCP_BILLING_ACCOUNT` GitHub Secret post-creation)
 
 
-## 2026-03-19
+### 2026-03-19
 
-### Done
+#### Done
 - Updated bootstrap script references throughout the repo (`seed/bootstrap.sh` → `scripts/seed-bootstrap.sh`, `scripts/control-plane-bootstrap.sh`)
 - Added Workload Identity Federation (WIF) to the control plane Terraform (`terraform/modules/control-plane/wif.tf`): pool, GitHub OIDC provider, and IAM binding for tf-admin-sa
 - Added `iamcredentials.googleapis.com` and `sts.googleapis.com` to control plane API list
@@ -76,7 +76,7 @@ Once that's done, I can start creating new templates to scaffold different stack
 - Created `.FEATURES/backstage-idp-implementation.md` with remaining IDP roadmap
 - Updated `backstage/README.md` with full local dev guide
 
-### Next steps
+#### Next steps
  [ ] Set up local Postgres (Docker) to match production — re-enable `plugin-search-backend-module-pg` and switch `app-config.local.yaml` database to Postgres. `packages/backend/src/index.ts` has a TODO marking the commented-out line.
 - [ ] Task 2 — Update catalog ownership model (`group:internal`, rename from `admins`)
 - [ ] Task 3 — Create MVP `common-assets/` skeleton (`.gitignore` only for now)
