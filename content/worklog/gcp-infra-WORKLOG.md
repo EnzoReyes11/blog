@@ -1,6 +1,6 @@
 # Worklog
 
-### 2026-03-22
+### 22/03/26
 Working on improving the worklog action. Builds failed yesterday. I found out that my common-assets had a copy of the worklog action,
 it was using a modified version. Testing if using the real one works. It did not work. I'm back to having it in assets.
 Anyway, the build error is gone.
@@ -9,7 +9,7 @@ Anyway, the build error is gone.
 Verify with this worklogs are not appearing on the site. The project is appearing, but not the logs.
 
 
-### 2026-03-21
+### 21/03/26
 Lots of work in the last few days. My platform is getting into shape. I already ingested old repos, and gave them the new templates. 
 I've to also ingest resources, and external clients repos and resources.
 Once that's done, I can start creating new templates to scaffold different stacks.
@@ -33,7 +33,7 @@ Once that's done, I can start creating new templates to scaffold different stack
 - Work on new templates to scaffold stacks: python, nodejs, go, etc.
 
 
-### 2026-03-20
+### 20/03/26
 
 #### Done
 - Updated Backstage to version 1.49.0
@@ -56,7 +56,7 @@ Once that's done, I can start creating new templates to scaffold different stack
 - [ ] new-client-project: collect billing account in the template UI and bake it into the workflow (currently set manually as `GCP_BILLING_ACCOUNT` GitHub Secret post-creation)
 
 
-### 2026-03-19
+### 19/03/26
 
 #### Done
 - Updated bootstrap script references throughout the repo (`seed/bootstrap.sh` → `scripts/seed-bootstrap.sh`, `scripts/control-plane-bootstrap.sh`)
