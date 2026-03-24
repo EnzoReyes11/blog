@@ -1,5 +1,10 @@
 # Worklog
 
+### 24/03/26
+
+Fixed many security issues, especially related to how input parameters were handled.
+Added some repo metadata into PROJECT.md.
+
 ### 22/03/26
 Removed parser.py, it was dead code.
 Several improvements and small fixes.
