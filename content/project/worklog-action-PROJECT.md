@@ -17,3 +17,13 @@ I use it to maintain a portfolio and blog in Astro.
 
 
 
+
+---
+
+## 📊 Repository Info
+
+| Field | Value |
+|---|---|
+| Visibility | Public |
+| Languages | Shell |
+| Last updated | 2026-03-24 |
