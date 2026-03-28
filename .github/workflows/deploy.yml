@@ -56,6 +56,8 @@ jobs:
     needs: [build-and-deploy]
     if: always()
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - uses: PostHog/posthog-github-action@v1
         with:
@@ -64,4 +66,4 @@ jobs:
           capture-run-duration: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           status-job: 'build-and-deploy'
-          posthog-api-host: ${{ vars.PUBLIC_POSTHOG_API_HOST }}
+          posthog-api-host: ${{ secrets.PUBLIC_POSTHOG_API_HOST }}
