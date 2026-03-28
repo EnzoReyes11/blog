@@ -10,6 +10,7 @@ Wired up PostHog analytics and set up Astro's env var system for the portfolio. 
 - Injecting env vars into the inline script via `define:vars`.
 - Created the `update-worklog` global Claude skill.
 - Added variables as Github Repository Secret.
+- Added logging of deployments into PostHog.
 - Verified it's working properly in PostHog!
 
 #### Work Remaining:
