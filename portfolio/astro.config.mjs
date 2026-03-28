@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, envField } from "astro/config";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
@@ -9,6 +9,19 @@ export default defineConfig({
   output: "static",
   site: "http://www.enzoreyes.dev",
   integrations: [mdx(), sitemap(), tailwind()],
+  env: {
+    schema: {
+      PUBLIC_POSTHOG_TOKEN: envField.string({
+        context: "client",
+        access: "public",
+      }),
+      PUBLIC_POSTHOG_API_HOST: envField.string({
+        context: "client",
+        access: "public",
+        default: "https://us.i.posthog.com",
+      }),
+    },
+  },
   markdown: {
     shikiConfig: {
       theme: "github-dark-high-contrast",
