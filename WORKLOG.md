@@ -9,9 +9,14 @@ Wired up PostHog analytics and set up Astro's env var system for the portfolio. 
 - Set up the `env.schema` in `astro.config.mjs` using `envField`. Now `PUBLIC_POSTHOG_TOKEN` and `PUBLIC_POSTHOG_API_HOST` are properly typed and validated at build time.
 - Injecting env vars into the inline script via `define:vars`.
 - Created the `update-worklog` global Claude skill.
+- Added variables as Github Repository Secret.
+- Verified it's working properly in PostHog!
 
 #### Work Remaining:
-- Verify events are actually showing up in the PostHog dashboard after first deploy.
+- I noticed that in the cards, the markdown is not interpreted properly. I see #### Done, instead of the styled content.
+- Add pagination.
+- Add filtering of blog entries by Project and by Technology.
+- Update the theme to something less quirky.
 
 
 ### 25/11/25
