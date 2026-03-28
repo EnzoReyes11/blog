@@ -1,5 +1,33 @@
 # Worklog
 
+
+### 28/03/26
+Wired up PostHog analytics and set up Astro's env var system for the portfolio. Also created a global Claude skill for updating this worklog.
+
+#### Done:
+- Added PostHog snippet to `BaseHead.astro` so it fires on every page.
+- Set up the `env.schema` in `astro.config.mjs` using `envField`. Now `PUBLIC_POSTHOG_TOKEN` and `PUBLIC_POSTHOG_API_HOST` are properly typed and validated at build time.
+- Injecting env vars into the inline script via `define:vars`.
+- Created the `update-worklog` global Claude skill.
+
+#### Work Remaining:
+- Verify events are actually showing up in the PostHog dashboard after first deploy.
+
+
+### 25/11/25
+Starting to build a bigger site
+
+#### Done:
+- Generated new markup for all sections
+- Created a new astro site from scratch
+- Started to convert the markup to astro code
+
+#### Work Remaining:
+- Green color is not being picked from styles
+- Convert all the markup to astro
+- Add the JS 
+
+
 ### 10/10/25
 Improved fonts and other minor changes.
 
