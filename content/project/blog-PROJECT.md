@@ -24,6 +24,7 @@ This blog is being served by Github Pages, and it's redeployed on each merge int
   1. On each Project file, there should be a link into the Worklog section, but filtered by Project.
   1. Clicking on a Technology chip should link to Projects and Worklogs related to that. To accomplish this, each Project should have (added manually at least), the list of technologies used.
 - Find a Hero image.
+- Project cards have timezone issues on the Date
 
 
 ## Technologies:
@@ -34,3 +35,13 @@ This blog is being served by Github Pages, and it's redeployed on each merge int
 - NPM
 - PNPM
 - Vite
+
+---
+
+## 📊 Repository Info
+
+| Field | Value |
+|---|---|
+| Visibility | Public |
+| Languages | Astro, TypeScript, JavaScript, CSS |
+| Last updated | 2026-03-28 |
