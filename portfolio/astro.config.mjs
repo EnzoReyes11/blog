@@ -18,7 +18,7 @@ export default defineConfig({
       PUBLIC_POSTHOG_API_HOST: envField.string({
         context: "client",
         access: "public",
-        default: "https://us.i.posthog.com",
+        default: "https://eu.i.posthog.com",
       }),
     },
   },
@@ -27,8 +27,8 @@ export default defineConfig({
       theme: "github-dark-high-contrast",
     },
   },
-	server: {
-      host: true,
-      port: 4321,
-    },
+  server: {
+    host: true,
+    port: 4321,
+  },
 });

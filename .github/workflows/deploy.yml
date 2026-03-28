@@ -38,6 +38,7 @@ jobs:
         run: pnpm run build
         env:
           PUBLIC_POSTHOG_TOKEN: ${{ secrets.PUBLIC_POSTHOG_TOKEN }}
+          PUBLIC_POSTHOG_API_HOST: ${{ vars.PUBLIC_POSTHOG_API_HOST }}
 
       - name: Set up GitHub Pages
         uses: actions/configure-pages@v6
