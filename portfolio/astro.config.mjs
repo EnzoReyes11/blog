@@ -7,7 +7,7 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   output: "static",
-  site: "http://www.enzoreyes.dev",
+  site: "https://enzoreyes.dev",
   integrations: [mdx(), sitemap(), tailwind()],
   env: {
     schema: {

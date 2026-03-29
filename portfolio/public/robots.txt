@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
 
-Sitemap: https://token-template.deno.dev/sitemap-index.xml
+Sitemap: https://enzoreyes.dev/sitemap-index.xml
