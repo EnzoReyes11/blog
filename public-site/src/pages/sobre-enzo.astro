@@ -1,0 +1,111 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { SITE, CONTACT } from '../consts';
+import { strings } from '../i18n';
+
+const { about } = strings;
+---
+
+<Layout
+  title={`Sobre Enzo Reyes | Automatización & Consultoría IT`}
+  description={SITE.description}
+  currentPage="about"
+  fullFooter={false}
+>
+
+  <!-- Hero -->
+  <div class="brutal-label">{about.pageLabel}</div>
+  <div class="brutal-card text-left grid md:grid-cols-3 gap-8 items-start">
+    <div class="flex flex-col items-center text-center">
+      <div class="w-40 h-40 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] overflow-hidden mb-4 bg-white">
+        <img src="/assets/profile.jpg" alt="Enzo Reyes" class="w-full h-full object-cover object-top" />
+      </div>
+      <p class="font-black text-xl uppercase">{about.name}</p>
+      <p class="text-xs font-black text-brand uppercase tracking-widest bg-white border border-black px-2 py-0.5 mt-1">{about.role}</p>
+      <div class="flex gap-3 mt-4">
+        <a href={CONTACT.linkedin} target="_blank" rel="noopener" class="px-3 py-1 border-2 border-black font-black text-xs uppercase hover:bg-brand hover:text-white transition-colors">LinkedIn</a>
+        <a href={CONTACT.github} target="_blank" rel="noopener" class="px-3 py-1 border-2 border-black font-black text-xs uppercase hover:bg-brand hover:text-white transition-colors">GitHub</a>
+      </div>
+    </div>
+    <div class="md:col-span-2 space-y-4">
+      <p class="font-bold text-lg leading-relaxed" set:html={about.introParas[0]}></p>
+      <p class="font-bold text-slate-700 leading-relaxed" set:html={about.introParas[1]}></p>
+      <p class="font-bold text-slate-700 leading-relaxed" set:html={about.introParas[2]}></p>
+      <p class="font-bold text-slate-500 text-sm leading-relaxed" set:html={about.introParas[3]}></p>
+      <div class="flex gap-2 flex-wrap pt-2">
+        {about.badges.map((badge) => (
+          <span class={`px-3 py-1 ${badge.color} border-2 border-black font-black text-xs uppercase`}>{badge.label}</span>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Con quién trabajo -->
+  <div class="brutal-label">{about.withWhoLabel}</div>
+  <div class="grid md:grid-cols-2 gap-8 mb-12">
+
+    <div class="brutal-card m-0 p-8 text-left">
+      <div class="bg-yellow-300 border-2 border-black p-2 inline-flex mb-4 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <h3 class="font-black text-xl mb-3 underline decoration-brand decoration-4 underline-offset-4">{about.pymesTitle}</h3>
+      <p class="font-bold text-slate-700">{about.pymesBody}</p>
+    </div>
+
+    <div class="brutal-card m-0 p-8 text-left">
+      <div class="bg-blue-100 border-2 border-black p-2 inline-flex mb-4 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <h3 class="font-black text-xl mb-3 underline decoration-brand decoration-4 underline-offset-4">{about.xdynamisTitle}</h3>
+      <p class="font-bold text-slate-700 mb-4" set:html={about.xdynamisBody}></p>
+      <a href={CONTACT.xdynamisUrl} target="_blank" rel="noopener" class="inline-block px-4 py-2 border-2 border-black font-black text-xs uppercase hover:bg-brand hover:text-white transition-colors shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+        {about.xdynamisBtn}
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Trayectoria -->
+  <div class="brutal-label">{about.timelineLabel}</div>
+  <div class="brutal-card text-left p-0 overflow-hidden mb-12">
+
+    {about.timeline.map((entry, i) => (
+      <div class={`p-6 flex gap-6 items-start hover:bg-yellow-50 transition-colors ${entry.highlight ? 'bg-brand-light' : ''} ${i < about.timeline.length - 1 ? 'border-b-2 border-black' : ''}`}>
+        <div class="shrink-0 w-24 text-right">
+          <span class="font-black text-xs text-slate-500 uppercase">{entry.period}</span>
+        </div>
+        <div class="w-px bg-black shrink-0 self-stretch mx-2"></div>
+        <div>
+          <p class="font-black text-lg" set:html={entry.title}></p>
+          <p class="font-bold text-slate-600 text-sm">{entry.body}</p>
+        </div>
+      </div>
+    ))}
+
+  </div>
+
+  <!-- Stack -->
+  <div class="brutal-label">{about.stackLabel}</div>
+  <div class="brutal-card p-0 overflow-hidden mb-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 border-l-2 border-t-2 border-black">
+      {about.stackItems.map((item) => (
+        <div class="brutal-grid-item">{item}</div>
+      ))}
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="brutal-label" id="contact">{about.ctaLabel}</div>
+  <div class="brutal-card text-center">
+    <p class="font-bold text-lg mb-8 text-slate-700">{about.ctaBody}</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href={CONTACT.calendarUrl} target="_blank" rel="noopener" class="brutal-button inline-block text-center">
+        AGENDÁ UNA CONSULTA
+      </a>
+      <a href={CONTACT.whatsappUrl} target="_blank" rel="noopener" class="inline-block px-8 py-3 bg-green-500 text-white font-black border-2 border-black text-center transition-all hover:-translate-y-0.5 hover:-translate-x-0.5 active:translate-y-0 active:translate-x-0" style="box-shadow: 4px 4px 0px 0px rgba(0,0,0,1)">
+        ESCRIBIME POR WHATSAPP
+      </a>
+    </div>
+  </div>
+
+</Layout>

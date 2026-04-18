@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./portfolio
+        working-directory: ./public-site
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     permissions:
@@ -39,6 +39,7 @@ jobs:
         env:
           PUBLIC_POSTHOG_TOKEN: ${{ secrets.PUBLIC_POSTHOG_TOKEN }}
           PUBLIC_POSTHOG_API_HOST: ${{ vars.PUBLIC_POSTHOG_API_HOST }}
+          FACEBOOK_DOMAIN_VERIFICATION: ${{ secrets.FACEBOOK_DOMAIN_VERIFICATION }}
 
       - name: Set up GitHub Pages
         uses: actions/configure-pages@v6
@@ -46,7 +47,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./portfolio/dist
+          path: ./public-site/dist
 
       - name: Deploy to GitHub Pages
         id: deployment

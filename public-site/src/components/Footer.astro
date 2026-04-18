@@ -1,0 +1,52 @@
+---
+import { strings } from '../i18n';
+
+interface Props {
+  full?: boolean;
+}
+
+const { full = true } = Astro.props;
+const { footer } = strings;
+---
+
+<footer class="mt-16 pt-12 border-t-4 border-black text-center pb-12">
+  {full && (
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-12 text-left mb-12">
+      <div>
+        <h4 class="font-black mb-4 uppercase text-sm tracking-widest text-slate-500">{footer.services.heading}</h4>
+        <ul class="space-y-3 font-bold text-sm">
+          {footer.services.items.map((item) => (
+            <li class="hover:text-brand cursor-pointer uppercase">{item}</li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-black mb-4 uppercase text-sm tracking-widest text-slate-500">{footer.company.heading}</h4>
+        <ul class="space-y-3 font-bold text-sm">
+          {footer.company.items.map((item) => (
+            <li class="hover:text-brand cursor-pointer uppercase">{item}</li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-black mb-4 uppercase text-sm tracking-widest text-slate-500">{footer.support.heading}</h4>
+        <ul class="space-y-3 font-bold text-sm">
+          {footer.support.items.map((item) => (
+            <li class="hover:text-brand cursor-pointer uppercase">{item}</li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-black mb-4 uppercase text-sm tracking-widest text-slate-500">{footer.social.heading}</h4>
+        <ul class="space-y-3 font-bold text-sm">
+          {footer.social.items.map((item) => (
+            <li class="hover:text-brand cursor-pointer uppercase">
+              <a href={item.url} target="_blank" rel="noopener">{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )}
+  <p class="text-xs font-black uppercase tracking-widest">{footer.copyright}</p>
+</footer>
