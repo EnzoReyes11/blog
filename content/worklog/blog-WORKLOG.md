@@ -19,6 +19,13 @@ Wired up PostHog analytics and set up Astro's env var system for the portfolio. 
 - Add filtering of blog entries by Project and by Technology.
 - Update the theme to something less quirky.
 
+i
+### 18/04/26
+Created a IT Consulting site to market on FB, Whatsapp, etc.
+
+#### Next steps:
+- Update the blog to the new site, and have it linked. Currently only the consulting site
+is displayed.
 
 ### 25/11/25
 Starting to build a bigger site
