@@ -1,6 +1,22 @@
 # Worklog
 
 
+### 19/04/26
+Small fixes to the main site. 
+
+#### Next steps:
+- Update the blog to the new site, and have it linked. Currently only the consulting site
+is displayed.
+- Really thing on what I want to sell and how.
+- Add ToS, Privacy Policies and AFIP footer.
+
+### 18/04/26
+Created a IT Consulting site to market on FB, Whatsapp, etc.
+
+#### Next steps:
+- Update the blog to the new site, and have it linked. Currently only the consulting site
+is displayed.
+
 ### 28/03/26
 Wired up PostHog analytics and set up Astro's env var system for the portfolio. Also created a global Claude skill for updating this worklog.
 
@@ -19,13 +35,6 @@ Wired up PostHog analytics and set up Astro's env var system for the portfolio. 
 - Add filtering of blog entries by Project and by Technology.
 - Update the theme to something less quirky.
 
-i
-### 18/04/26
-Created a IT Consulting site to market on FB, Whatsapp, etc.
-
-#### Next steps:
-- Update the blog to the new site, and have it linked. Currently only the consulting site
-is displayed.
 
 ### 25/11/25
 Starting to build a bigger site

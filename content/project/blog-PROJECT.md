@@ -44,4 +44,4 @@ This blog is being served by Github Pages, and it's redeployed on each merge int
 |---|---|
 | Visibility | Public |
 | Languages | Astro, TypeScript, JavaScript, CSS |
-| Last updated | 2026-04-18 |
+| Last updated | 2026-04-19 |
