@@ -4,7 +4,7 @@ export const SITE = {
 };
 
 export const CONTACT = {
-  email: 'enzo@reyesconsulting.com',
+  email: 'enzo@enzoreyes.dev',
   phone: '+54 9 11 3701 3966',
   whatsappUrl: 'https://wa.me/5491137013966',
   calendarUrl: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2eS_T4KuCdOYqM6c8PtYHEnvabR6_AHPiuxI7pn4QGMolVA7Jqps8B4lw20NNmW2Xd0MoxFgcE?gv=true',

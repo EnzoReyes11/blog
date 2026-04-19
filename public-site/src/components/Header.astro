@@ -1,26 +1,44 @@
 ---
-import { strings } from '../i18n';
+import { strings } from "../i18n";
 
 interface Props {
-  currentPage?: 'home' | 'about';
+  currentPage?: "home" | "about";
 }
 
-const { currentPage = 'home' } = Astro.props;
+const { currentPage = "home" } = Astro.props;
 const { nav } = strings;
 ---
 
-<header class="flex justify-between items-center mb-16 border-b-2 border-black pb-4">
+<header
+  class="flex justify-between items-center mb-16 border-b-2 border-black pb-4"
+>
   <div class="flex items-center gap-3">
-    <div class="w-10 h-10 bg-brand border-2 border-black flex items-center justify-center text-white font-black text-xl">ER</div>
-    <span class="font-black text-2xl tracking-tight uppercase">Enzo Reyes</span>
+    <a class="flex items-center gap-3" href="/">
+      <div
+        class="w-10 h-10 bg-brand border-2 border-black flex items-center justify-center text-white font-black text-xl"
+      >
+        ER
+      </div>
+      <span class="font-black text-2xl tracking-tight uppercase"
+        >Enzo Reyes</span
+      >
+    </a>
   </div>
   <nav class="flex gap-6 text-sm font-black uppercase tracking-widest">
-    <a href="/" class="hover:text-brand underline decoration-2 underline-offset-4">{nav.inicio}</a>
-    <a href="/#servicios" class="hover:text-brand underline decoration-2 underline-offset-4">{nav.servicios}</a>
+    <a
+      href="/#servicios"
+      class="hover:text-brand underline decoration-2 underline-offset-4"
+      >{nav.servicios}</a
+    >
     <a
       href="/sobre-enzo"
-      class={`underline decoration-2 underline-offset-4 ${currentPage === 'about' ? 'text-brand' : 'hover:text-brand'}`}
-    >{nav.sobreMi}</a>
-    <a href="/#contact" class="hover:text-brand underline decoration-2 underline-offset-4">{nav.contacto}</a>
+      class={`underline decoration-2 underline-offset-4 ${currentPage === "about" ? "text-brand" : "hover:text-brand"}`}
+      >{nav.sobreMi}</a
+    >
+    <a
+      href="/#contact"
+      class="hover:text-brand underline decoration-2 underline-offset-4"
+      >{nav.contacto}</a
+    >
   </nav>
 </header>

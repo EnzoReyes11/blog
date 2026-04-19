@@ -16,7 +16,7 @@ const { footer } = strings;
         <h4 class="font-black mb-4 uppercase text-sm tracking-widest text-slate-500">{footer.services.heading}</h4>
         <ul class="space-y-3 font-bold text-sm">
           {footer.services.items.map((item) => (
-            <li class="hover:text-brand cursor-pointer uppercase">{item}</li>
+            <li class="hover:text-brand uppercase"><a href={item.url}>{item.label}</a></li>
           ))}
         </ul>
       </div>
@@ -24,7 +24,7 @@ const { footer } = strings;
         <h4 class="font-black mb-4 uppercase text-sm tracking-widest text-slate-500">{footer.company.heading}</h4>
         <ul class="space-y-3 font-bold text-sm">
           {footer.company.items.map((item) => (
-            <li class="hover:text-brand cursor-pointer uppercase">{item}</li>
+            <li class="hover:text-brand uppercase"><a href={item.url}>{item.label}</a></li>
           ))}
         </ul>
       </div>
@@ -32,7 +32,7 @@ const { footer } = strings;
         <h4 class="font-black mb-4 uppercase text-sm tracking-widest text-slate-500">{footer.support.heading}</h4>
         <ul class="space-y-3 font-bold text-sm">
           {footer.support.items.map((item) => (
-            <li class="hover:text-brand cursor-pointer uppercase">{item}</li>
+            <li class="hover:text-brand uppercase"><a href={item.url}>{item.label}</a></li>
           ))}
         </ul>
       </div>

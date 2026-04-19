@@ -10,18 +10,18 @@ export const strings = {
     heroItems: [
       'Chatbots con IA para WhatsApp e Instagram que atienden, califican y siguen leads las 24hs.',
       'Campañas en Meta Ads y Google Ads con seguimiento automático de conversiones y reportes.',
-      'Posteos multiplataforma programados y generados con IA — Instagram, LinkedIn, Facebook y más.',
+      'Posteos multiplataforma programados y generados con IA: Instagram, LinkedIn, Facebook y más.',
       'Procesamiento automático de facturas y presupuestos: extracción, validación y conciliación sin intervención manual.',
     ],
     whyLabel: '¿POR QUÉ TRABAJAR CONMIGO?',
     whyCards: [
       {
         title: 'No vendo IA, evalúo si conviene',
-        body: 'Analizo cada proceso con criterio costo/beneficio. A veces la solución correcta es un agente con IA; otras, un script simple. No aplico tecnología por moda.',
+        body: 'Analizo cada proceso con criterio costo/beneficio. A veces la solución correcta es un agente con IA, otras, un script simple. No aplico tecnología por moda.',
       },
       {
-        title: 'Ejecución Rápida',
-        body: 'Prototipo, pruebo y despliega soluciones que funcionan desde el primer día, sin burocracia ni tiempos de agencia.',
+        title: 'De menos a más',
+        body: 'Priorizo soluciones simples, que te den resultados rápidos y puedas escalar después. Medimos y ajustamos sobre la marcha.',
       },
     ],
     servicesLabel: 'QUÉ PUEDO AUTOMATIZAR',
@@ -34,7 +34,7 @@ export const strings = {
       'FACTURAS & PRESUPUESTOS',
       'CONCILIACIONES',
       'CRM AUTOMATION',
-      'REPORTES AUTO.',
+      'REPORTES',
       'MERCADOLIBRE',
       'E-COMMERCE',
       'NOTIFICACIONES',
@@ -54,7 +54,7 @@ export const strings = {
       'Soy ingeniero full stack con <span class="font-black underline decoration-brand decoration-4 underline-offset-2">más de 16 años</span> de experiencia construyendo sistemas de producción, tanto en grandes empresas como en startups.',
       'Pasé 5 años en <span class="font-black text-black">Google</span> como Customer Solutions Engineer, donde trabajé directamente con equipos de marketing y analytics para convertir objetivos de negocio en resultados medibles — campañas, pipelines de datos, integraciones end-to-end.',
       'Hoy aplico esa misma mentalidad como consultor independiente: ayudo a pymes a automatizar sus procesos, mejorar sus campañas digitales y sacarle provecho real a la IA — sin venderles tecnología que no necesitan.',
-      'Fuera del trabajo, soy montañista apasionado con formación en liderazgo de expediciones — una disciplina que, más de una vez, me enseñó más sobre gestión de riesgos y toma de decisiones que cualquier libro de management.',
+      'Fuera del trabajo, soy montañista apasionado con formación en liderazgo de expediciones, una disciplina que, más de una vez, me enseñó más sobre gestión de riesgos y toma de decisiones que cualquier libro de management.',
     ],
     badges: [
       { label: 'Buenos Aires, Argentina', color: 'bg-brand-light' },
@@ -104,7 +104,7 @@ export const strings = {
     ],
     stackLabel: 'HERRAMIENTAS & STACK',
     stackItems: [
-      'Python / Go / JS',
+      'Python / JS',
       'React / Next.js',
       'Google Ads',
       'Meta Ads',
@@ -116,6 +116,7 @@ export const strings = {
       'Airflow / ETL',
       'GitHub Actions',
       'Terraform',
+      'PostgreSQL',
     ],
     ctaLabel: '¿ARRANCAMOS?',
     ctaBody: 'Si tenés un proceso que querés automatizar o una campaña que no está dando resultados, escribime. La primera charla es sin costo.',
@@ -123,20 +124,32 @@ export const strings = {
   footer: {
     services: {
       heading: 'Servicios',
-      items: ['Chatbots con IA', 'Marketing Digital', 'Procesamiento de Facturas'],
+      items: [
+        { label: 'Chatbots con IA', url: '/#servicios' },
+        { label: 'Marketing Digital', url: '/#servicios' },
+        { label: 'Procesamiento de Facturas', url: '/#servicios' },
+      ],
     },
     company: {
       heading: 'Empresa',
-      items: ['Sobre Enzo', 'Filosofía', 'Privacidad'],
+      items: [
+        { label: 'Sobre Enzo', url: '/sobre-enzo' },
+        { label: 'Filosofía', url: '/sobre-enzo' },
+        { label: 'Privacidad', url: '#' },
+      ],
     },
     support: {
       heading: 'Soporte',
-      items: ['Términos', 'Contacto', 'Preguntas Frecuentes'],
+      items: [
+        { label: 'Términos', url: '#' },
+        { label: 'Contacto', url: '/#contact' },
+        { label: 'Preguntas Frecuentes', url: '#' },
+      ],
     },
     social: {
       heading: 'Redes Sociales',
       items: [{ label: 'LinkedIn', url: 'https://www.linkedin.com/in/enzo-reyes/' }],
     },
-    copyright: 'Copyright © 2026 ENZO REYES CONSULTING. TODOS LOS DERECHOS RESERVADOS.',
+    copyright: 'Copyright © 2026 ENZO REYES DEV. TODOS LOS DERECHOS RESERVADOS.',
   },
 };
